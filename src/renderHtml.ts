@@ -19,11 +19,18 @@ export function renderHtml(content: string) {
         <main>
           <p>Your D1 Database contains the following data:</p>
           <pre><code><span style="color: #0E838F">&gt; </span>SELECT * FROM comments LIMIT 3;<br>${content}</code></pre>
+          <form action="/" method="POST">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required />
+            <label for="content">Comment:</label>
+            <textarea id="content" name="content" required></textarea>
+            <button type="submit">Add Comment</button>
+          </form>
           <small class="blue">
             <a target="_blank" href="https://developers.cloudflare.com/d1/tutorials/build-a-comments-api/">Build a comments API with Workers and D1</a>
           </small>
         </main>
       </body>
     </html>
-`;
+  `;
 }
