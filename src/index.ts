@@ -25,7 +25,7 @@ export default {
     }
 
     // Existing GET request to display comments
-    const stmt = env.DB.prepare("SELECT * FROM comments LIMIT 3");
+    const stmt = env.DB.prepare("SELECT * FROM comments");
     const { results } = await stmt.all();
 
     return new Response(renderHtml(JSON.stringify(results, null, 2)), {

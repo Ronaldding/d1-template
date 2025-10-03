@@ -18,7 +18,7 @@ export function renderHtml(content: string) {
         </header>
         <main>
           <p>Your D1 Database contains the following data:</p>
-          <pre><code><span style="color: #0E838F">&gt; </span>SELECT * FROM comments LIMIT 3;<br>${content}</code></pre>
+          <pre><code><span style="color: #0E838F">&gt; </span>SELECT * FROM comments;<br>${content}</code></pre>
           <form action="/" method="POST">
             <label for="author">Author:</label>
             <input type="text" id="author" name="author" required />
